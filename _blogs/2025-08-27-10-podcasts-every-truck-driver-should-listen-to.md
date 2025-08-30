@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "10 Podcasts Every Truck Driver Should Listen To"
 date: 2025-08-27 09:00:07 -0400
 categories: [blog, dot-physical, trucking]

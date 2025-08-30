@@ -6,8 +6,6 @@ weight: 2
 
 Invest in your drivers' **long-term health and safety** with DOT on Spot's comprehensive wellness workshops. Our owner, a licensed medical professional, brings expert health guidance directly to your facility, empowering drivers with [practical wellness strategies](#workshop-topics) that improve both their quality of life and their ability to maintain DOT compliance.
 
-![Driver Wellness Workshop](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
-
 # Workshop Objectives
 
 Our wellness workshops go beyond basic DOT compliance to address the root causes of health issues that affect commercial drivers.

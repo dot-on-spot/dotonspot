@@ -6,8 +6,6 @@ weight: 1
 
 Eliminate downtime and waiting rooms with **DOT on Spot's mobile clinic services**. Our certified medical professionals bring a fully-equipped mobile clinic directly to your location, conducting complete DOT physicals right at your facility.
 
-![Mobile DOT Physical Service](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
-
 ## How Our Mobile Clinic Works
 
 Our state-of-the-art mobile clinic arrives at your facility as a complete medical examination unit, equipped with everything needed to perform thorough DOT physical examinations:

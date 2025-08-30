@@ -7,8 +7,6 @@ bodyClass: page-about
 
 **Life's too short for waiting rooms.** After more than a decade in medicine, our founder recognized a fundamental problem: traditional healthcare systems create unnecessary barriers between patients and the care they need. This insight led to the creation of DOT on Spot – a mobile DOT physical service that eliminates waiting rooms and brings professional medical examinations directly to your fleet.
 
-![DOT on Spot Mobile Medical Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
-
 # Our Mission
 
 DOT on Spot exists to streamline DOT compliance while respecting the time and operational needs of commercial fleets.
