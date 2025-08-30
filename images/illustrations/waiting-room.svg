@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="900px" viewBox="0 0 1200 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>waiting-room-bored</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="waiting-room-scene" transform="translate(50, 50)" fill-rule="nonzero">
+
+            <!-- Background Elements -->
+            <path d="M50 750 L1050 750 C1052 750 1052 747 1050 747 L50 747 C48 747 48 750 50 750 Z" fill="#E8E8E8"/>
+            <path d="M0 200 L1100 200 C1102 200 1102 197 1100 197 L0 197 C-2 197 -2 200 0 200 Z" fill="#E8E8E8"/>
+
+            <!-- Wall with medical posters -->
+            <rect x="0" y="0" width="1100" height="200" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
+            <rect x="100" y="50" width="120" height="80" fill="#EC615B" opacity="0.3"/>
+            <rect x="300" y="40" width="100" height="100" fill="#E5261F" opacity="0.2"/>
+            <rect x="500" y="60" width="90" height="70" fill="#E8E8E8"/>
+
+            <!-- Waiting room chairs -->
+            <g id="chairs" transform="translate(50, 350)">
+                <!-- Chair 1 -->
+                <rect x="0" y="100" width="80" height="15" fill="#6D6C6C"/>
+                <rect x="5" y="50" width="70" height="50" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="5" y="15" width="70" height="35" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="0" y="115" width="15" height="40" fill="#6D6C6C"/>
+                <rect x="65" y="115" width="15" height="40" fill="#6D6C6C"/>
+
+                <!-- Chair 2 (where person sits) -->
+                <rect x="150" y="100" width="80" height="15" fill="#6D6C6C"/>
+                <rect x="155" y="50" width="70" height="50" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="155" y="15" width="70" height="35" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="150" y="115" width="15" height="40" fill="#6D6C6C"/>
+                <rect x="215" y="115" width="15" height="40" fill="#6D6C6C"/>
+
+                <!-- Chair 3 -->
+                <rect x="300" y="100" width="80" height="15" fill="#6D6C6C"/>
+                <rect x="305" y="50" width="70" height="50" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="305" y="15" width="70" height="35" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="300" y="115" width="15" height="40" fill="#6D6C6C"/>
+                <rect x="365" y="115" width="15" height="40" fill="#6D6C6C"/>
+            </g>
+
+            <!-- Bored person sitting -->
+            <g id="bored-person" transform="translate(180, 280)">
+                <!-- Body -->
+                <ellipse cx="35" cy="140" rx="25" ry="35" fill="#EC615B"/>
+                <rect x="15" y="105" width="40" height="50" fill="#EC615B"/>
+
+                <!-- Arms (slouched) -->
+                <ellipse cx="5" cy="125" rx="8" ry="25" fill="#FDBCB4" transform="rotate(-20 5 125)"/>
+                <ellipse cx="65" cy="125" rx="8" ry="25" fill="#FDBCB4" transform="rotate(20 65 125)"/>
+
+                <!-- Legs -->
+                <rect x="20" y="170" width="12" height="40" fill="#161616"/>
+                <rect x="38" y="170" width="12" height="40" fill="#161616"/>
+
+                <!-- Feet -->
+                <ellipse cx="26" cy="215" rx="12" ry="6" fill="#161616"/>
+                <ellipse cx="44" cy="215" rx="12" ry="6" fill="#161616"/>
+
+                <!-- Head -->
+                <circle cx="35" cy="70" r="25" fill="#FDBCB4"/>
+
+                <!-- Hair -->
+                <path d="M15 55 Q35 45 55 55 Q55 50 50 45 Q35 40 20 45 Q10 50 15 55 Z" fill="#8B4513"/>
+
+                <!-- Bored expression -->
+                <circle cx="28" cy="65" r="2" fill="#161616"/>
+                <circle cx="42" cy="65" r="2" fill="#161616"/>
+                <path d="M30 75 Q35 72 40 75" stroke="#161616" stroke-width="1.5" fill="none"/>
+
+                <!-- Hand on cheek (bored pose) -->
+                <circle cx="8" cy="60" r="6" fill="#FDBCB4"/>
+                <path d="M2 55 Q8 50 14 55" stroke="#161616" stroke-width="1" fill="none" opacity="0.5"/>
+            </g>
+
+            <!-- Magazine table -->
+            <g id="magazine-table" transform="translate(400, 450)">
+                <ellipse cx="40" cy="60" rx="40" ry="15" fill="#6D6C6C"/>
+                <rect x="0" y="45" width="80" height="30" fill="#E8E8E8" stroke="#161616" stroke-width="1"/>
+                <rect x="35" y="60" width="15" height="35" fill="#6D6C6C"/>
+
+                <!-- Magazines scattered on table -->
+                <rect x="10" y="35" width="20" height="15" fill="#E5261F" opacity="0.7" transform="rotate(5 20 42)"/>
+                <rect x="25" y="30" width="18" height="12" fill="#EC615B" opacity="0.6" transform="rotate(-10 34 36)"/>
+                <rect x="45" y="38" width="22" height="16" fill="#E8E8E8" transform="rotate(8 56 46)"/>
+            </g>
+
+            <!-- Clock on wall showing long wait -->
+            <g id="wall-clock" transform="translate(800, 80)">
+                <circle cx="25" cy="25" r="25" fill="#FFFFFF" stroke="#161616" stroke-width="2"/>
+                <circle cx="25" cy="25" r="2" fill="#161616"/>
+                <!-- Clock hands showing 2:45 (long wait time) -->
+                <line x1="25" y1="25" x2="25" y2="10" stroke="#161616" stroke-width="2"/>
+                <line x1="25" y1="25" x2="35" y2="30" stroke="#161616" stroke-width="1"/>
+                <!-- Numbers -->
+                <text x="25" y="8" text-anchor="middle" font-family="Arial" font-size="6" fill="#161616">12</text>
+                <text x="42" y="28" text-anchor="middle" font-family="Arial" font-size="6" fill="#161616">3</text>
+                <text x="25" y="46" text-anchor="middle" font-family="Arial" font-size="6" fill="#161616">6</text>
+                <text x="8" y="28" text-anchor="middle" font-family="Arial" font-size="6" fill="#161616">9</text>
+            </g>
+
+            <!-- Reception desk -->
+            <g id="reception" transform="translate(850, 200)">
+                <rect x="0" y="0" width="200" height="80" fill="#E8E8E8" stroke="#161616" stroke-width="2"/>
+                <rect x="10" y="-20" width="180" height="20" fill="#FFFFFF" stroke="#161616" stroke-width="1"/>
+                <rect x="20" y="-15" width="20" height="10" fill="#E5261F" opacity="0.5"/>
+                <rect x="50" y="-15" width="15" height="10" fill="#EC615B" opacity="0.5"/>
+            </g>
+
+            <!-- Decorative floor elements -->
+            <path d="M0 780 Q200 770 400 780 Q600 790 800 780 Q1000 770 1100 780" stroke="#E8E8E8" stroke-width="2" fill="none"/>
+            <circle cx="950" cy="700" r="3" fill="#E8E8E8"/>
+            <circle cx="150" cy="720" r="2" fill="#E8E8E8"/>
+            <circle cx="600" cy="710" r="2.5" fill="#E8E8E8"/>
+
+            <!-- Thought bubble showing impatience -->
+            <g id="thought-bubble" transform="translate(280, 180)">
+                <ellipse cx="30" cy="20" rx="25" ry="15" fill="#FFFFFF" stroke="#161616" stroke-width="1" opacity="0.9"/>
+                <circle cx="20" cy="35" r="3" fill="#FFFFFF" stroke="#161616" stroke-width="1" opacity="0.8"/>
+                <circle cx="15" cy="42" r="2" fill="#FFFFFF" stroke="#161616" stroke-width="1" opacity="0.7"/>
+                <text x="30" y="24" text-anchor="middle" font-family="Arial" font-size="8" fill="#161616">...</text>
+            </g>
+
+        </g>
+    </g>
+</svg>
