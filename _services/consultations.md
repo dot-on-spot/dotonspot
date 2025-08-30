@@ -6,8 +6,6 @@ weight: 3
 
 At **DOT on Spot**, we believe in transparency and helping you make informed decisions about your fleet's health and compliance needs. That's why we offer **completely free consultations** to discuss your specific requirements and how our mobile DOT physical services can benefit your operation.
 
-![DOT Physical Consultation](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
-
 # What to Expect
 
 Our free consultation is designed to understand your unique challenges and provide tailored solutions for your fleet's DOT physical requirements.
