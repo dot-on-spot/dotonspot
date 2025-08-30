@@ -5,83 +5,51 @@ description: About
 bodyClass: page-about
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+**Life's too short for waiting rooms.** After more than a decade in medicine, our founder recognized a fundamental problem: traditional healthcare systems create unnecessary barriers between patients and the care they need. This insight led to the creation of DOT on Spot – a mobile DOT physical service that eliminates waiting rooms and brings professional medical examinations directly to your fleet.
 
-![Accounting Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
+![DOT on Spot Mobile Medical Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
 
-# Objectives
+# Our Mission
 
-Financial accounting and financial reporting are often used as synonyms.
+DOT on Spot exists to streamline DOT compliance while respecting the time and operational needs of commercial fleets.
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+1. **Eliminate Downtime** - Bring medical services to your location instead of taking drivers off the road
+2. **Improve Efficiency** - Replace hours-long clinic visits with convenient on-site examinations
+3. **Maintain Excellence** - Deliver the same thorough, FMCSA-compliant care in a more convenient format
 
-## Relevance
+## Our Story
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+Founded by a medical professional with over 10 years of healthcare experience, DOT on Spot was born from frustration with the inefficiencies plaguing traditional medical services. Too many patients – especially commercial drivers – were losing valuable time sitting in waiting rooms for routine examinations that could be conducted more efficiently.
 
-> The ingredients of relevance are the predictive value and confirmatory value.
+> The best medical care is care that fits into your life, not the other way around.
 
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
+Recognizing that fleet managers face constant pressure to keep drivers on the road while maintaining compliance, we developed a solution that serves both needs: mobile DOT physicals that come to you.
 
-## Faithful Representation
+## What Sets Us Apart
 
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
+Our approach transforms the DOT physical experience from a time-consuming obligation into a streamlined business process.
 
-## Enhancing Qualitative Characteristics
+### Medical Excellence
+Licensed, FMCSA-certified medical professionals with extensive experience in commercial driver health and DOT compliance requirements.
 
-### Verifiability
+### Operational Efficiency
+Fully-equipped mobile clinic eliminates travel time, waiting rooms, and scheduling complications while maintaining all regulatory standards.
 
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
-
-### Comparability
-
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
-
-### Understandability
-
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
+### Business Partnership
+We understand that your success depends on keeping drivers healthy, compliant, and on the road – our services are designed around that reality.
 
 ---
 
-## Statement of cash flows
+## Our Services Today
 
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
+Building on our founder's medical expertise and business insight, DOT on Spot has evolved into a comprehensive mobile medical service provider:
 
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
+| Service | Focus | Benefit |
+| ------- | ----- | ------- |
+| **Mobile DOT Physicals** | FMCSA compliance | Zero downtime, immediate results |
+| **Wellness Workshops** | Preventive health | Better long-term outcomes |
+| **Free Consultations** | Custom solutions | Tailored compliance strategies |
 
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
+**Our Commitment:** Every service reflects our founding principle that professional medical care should enhance your operation, not disrupt it. From our mobile clinic technology to our scheduling flexibility, everything is designed to deliver exceptional medical services on your terms.
 
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
-
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
-
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
-
-## Statement of financial position (balance sheet)
-
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
-
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
-
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.
+**Ready to Experience the Difference?** Contact DOT on Spot today and discover why leading fleets choose mobile DOT physicals for their compliance needs. Because when it comes to keeping your drivers healthy and on the road, life really is too short for waiting rooms.
