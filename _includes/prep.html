@@ -1,0 +1,471 @@
+<style>
+    .dot-questionnaire {
+        --accent: #e5261f;
+        --accent-dark: #a01b16;
+        --muted: #6c757d;
+        --border: #dee2e6;
+        --card: #f8f9fa;
+    }
+
+    .dot-questionnaire .question-group {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .dot-questionnaire .question-label {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #2f2f41;
+    }
+
+    .dot-questionnaire .pill {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        margin: 0.25rem 0.25rem 0.25rem 0;
+        cursor: pointer;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+        display: inline-block;
+    }
+
+    .dot-questionnaire .pill:hover {
+        border-color: var(--accent);
+        background: #fff6f8;
+    }
+
+    .dot-questionnaire .pill[aria-pressed="true"] {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+    }
+
+    .dot-questionnaire .checklist-section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .dot-questionnaire .checklist-section h3 {
+        color: var(--accent);
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .dot-questionnaire .checklist-section ul {
+        padding-left: 1.125rem;
+    }
+
+    .dot-questionnaire .checklist-section ul li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    .dot-questionnaire .tag {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        margin: 0.125rem;
+    }
+
+    .dot-questionnaire .smart-tips {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .dot-questionnaire .btn-accent {
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: white;
+    }
+
+    .dot-questionnaire .btn-accent:hover {
+        background-color: var(--accent-dark);
+        border-color: var(--accent-dark);
+        color: white;
+    }
+
+    .dot-questionnaire .text-muted {
+        color: var(--muted) !important;
+        font-size: 0.875rem;
+    }
+
+    @media print {
+        .dot-questionnaire .no-print {
+            display: none !important;
+        }
+    }
+</style>
+
+<div class="dot-questionnaire">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-3">Are you ready for your DOT physical?</h2>
+            <p class="lead text-muted mb-4">
+                Answer a few questions to get a personalized preparation
+                checklist for your exam. No data is stored or transmitted.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div id="questions"></div>
+
+            <div class="d-flex flex-wrap align-items-center gap-2 no-print">
+                <button
+                    class="btn btn-accent"
+                    id="printBtn"
+                    title="Print or Save as PDF"
+                >
+                    <i class="fas fa-print me-2"></i>Print or save checklist
+                </button>
+                <button class="btn btn-outline-secondary" id="resetBtn">
+                    <i class="fas fa-redo me-2"></i>Reset
+                </button>
+                <span class="text-muted ms-3">
+                    <i class="fas fa-lightbulb me-1"></i>
+                    Tip: bring a valid photo ID to every exam
+                </span>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="checklist-section">
+                <h3>
+                    <i class="fas fa-clipboard-list me-2"></i>Your Checklist
+                </h3>
+                <ul id="output" class="mb-3"></ul>
+                <div id="tags"></div>
+            </div>
+
+            <div class="smart-tips">
+                <h4 class="h6 mb-2">
+                    <i class="fas fa-brain me-2"></i>Smart Prep Tips
+                </h4>
+                <ul class="mb-0 small">
+                    <li>
+                        Avoid caffeine, nicotine, and energy drinks for 2–3
+                        hours before your exam
+                    </li>
+                    <li>
+                        Take prescribed medications as usual unless your
+                        clinician instructed otherwise
+                    </li>
+                    <li>
+                        Stay hydrated and be ready to provide a urine sample
+                    </li>
+                    <li>
+                        Bring glasses or contacts if you use them for driving
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-muted small mt-3">
+                <i class="fas fa-info-circle me-1"></i>
+                Links provided are official FMCSA forms. DOT On The Spot does
+                not determine exemptions; bring completed forms to your medical
+                examiner.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const QUESTIONS = [
+        {
+            id: "id",
+            text: "Do you have a valid government photo ID?",
+            type: "yn",
+            yes: [],
+            no: ["Bring a valid government photo ID."],
+        },
+        {
+            id: "sleep_apnea",
+            text: "Do you use a CPAP for sleep apnea?",
+            type: "yn",
+            yes: [
+                "Bring your CPAP compliance report showing at least 30 days of usage.",
+            ],
+            no: [],
+        },
+        {
+            id: "bp_meds",
+            text: "Do you take medication for high blood pressure?",
+            type: "yn",
+            yes: [
+                "Bring a current medication list with doses. Take your medication as prescribed the day of the exam.",
+            ],
+            no: [],
+        },
+        {
+            id: "diabetes",
+            text: "Do you have diabetes?",
+            type: "multi",
+            options: [
+                {
+                    k: "diet",
+                    label: "Diet controlled",
+                    add: [
+                        "Bring your most recent primary care note if available.",
+                    ],
+                },
+                {
+                    k: "oral",
+                    label: "Oral meds",
+                    add: [
+                        "Bring your current medication list and any recent lab results you have.",
+                    ],
+                },
+                {
+                    k: "insulin",
+                    label: "Insulin",
+                    add: [
+                        "Bring your insulin and glucose log or device reports if available.",
+                        "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2025-04/Insulin-Treated%20Diabetes%20Mellitus%20Assessment%20Form%20MCSA-5870_508.pdf' target='_blank'>Download FMCSA Insulin-Treated Diabetes Form (MCSA-5870)</a>",
+                    ],
+                },
+            ],
+        },
+        {
+            id: "vision",
+            text: "Do you use glasses or contact lenses for driving?",
+            type: "yn",
+            yes: [
+                "Bring your glasses or contacts and a backup pair if possible.",
+            ],
+            no: [],
+        },
+        {
+            id: "hearing_fail",
+            text: "Have you ever failed an FMCSA hearing test with or without hearing aids?",
+            type: "yn",
+            yes: [
+                "Bring your hearing aids with fresh batteries or charger.",
+                "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2024-07/Federal%20Hearing%20Exemption%20NEW%2007082024.pdf' target='_blank'>Download FMCSA Hearing Exemption Application</a>",
+            ],
+            no: [],
+        },
+        {
+            id: "hearing_loss",
+            text: "Are you deaf or do you have a history of progressive hearing loss?",
+            type: "yn",
+            yes: [
+                "Bring any audiology records if available.",
+                "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2024-07/Federal%20Hearing%20Exemption%20NEW%2007082024.pdf' target='_blank'>Download FMCSA Hearing Exemption Application</a>",
+            ],
+            no: [],
+        },
+        {
+            id: "heart",
+            text: "History of heart attack, stent, bypass, or heart failure?",
+            type: "yn",
+            yes: [
+                "Bring your latest cardiology note and any recent test results.",
+            ],
+            no: [],
+        },
+        {
+            id: "seizure_meds",
+            text: "Are you currently taking medicine to prevent seizures?",
+            type: "yn",
+            yes: [
+                "Bring neurology notes and current treatment information.",
+                "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2024-07/NEW%20Seizure%2007082024.pdf' target='_blank'>Download FMCSA Seizure Exemption Application</a>",
+            ],
+            no: [],
+        },
+        {
+            id: "seizure_dx",
+            text: "Have you ever been diagnosed with epilepsy or had a seizure, blackout, or loss of consciousness?",
+            type: "yn",
+            yes: [
+                "Bring neurology notes that describe your diagnosis and status.",
+                "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2024-07/NEW%20Seizure%2007082024.pdf' target='_blank'>Download FMCSA Seizure Exemption Application</a>",
+            ],
+            no: [],
+        },
+        {
+            id: "blood_thinners",
+            text: "Do you take blood thinners, for example warfarin or apixaban?",
+            type: "yn",
+            yes: [
+                "Bring your medication list. If on warfarin, bring your last INR results if available.",
+            ],
+            no: [],
+        },
+        {
+            id: "lung",
+            text: "COPD, asthma, or other lung disease?",
+            type: "yn",
+            yes: [
+                "Bring inhalers and your action plan or recent pulmonary note if available.",
+            ],
+            no: [],
+        },
+        {
+            id: "surgery",
+            text: "Recent surgery or hospitalization in the last year?",
+            type: "yn",
+            yes: [
+                "Bring discharge papers and follow-up notes that show recovery and current work status.",
+            ],
+            no: [],
+        },
+        {
+            id: "limb",
+            text: "Do you have a missing, impaired, or prosthetic arm, hand, leg, or foot that affects your ability to use the controls of a commercial motor vehicle?",
+            type: "yn",
+            yes: [
+                "Bring any prosthetic or assistive devices.",
+                "<a class='btn btn-sm btn-outline-primary' href='https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/docs/spe-certificate-package.pdf' target='_blank'>Download FMCSA Skill Performance Evaluation (SPE) Package</a>",
+            ],
+            no: [],
+        },
+        {
+            id: "company",
+            text: "Is your company asking for drug or alcohol testing at the same visit?",
+            type: "yn",
+            yes: [
+                "Bring a government photo ID and be prepared for collection procedures if ordered by your employer.",
+            ],
+            no: [],
+        },
+    ];
+
+    const qHost = document.getElementById("questions");
+    const out = document.getElementById("output");
+    const tags = document.getElementById("tags");
+    const state = {};
+
+    function render() {
+        qHost.innerHTML = "";
+        QUESTIONS.forEach((q) => {
+            const row = document.createElement("div");
+            row.className = "question-group";
+
+            const label = document.createElement("div");
+            label.className = "question-label";
+            label.textContent = q.text;
+            row.appendChild(label);
+
+            if (q.type === "yn") {
+                const yes = pill("Yes");
+                const no = pill("No");
+                yes.addEventListener("click", () =>
+                    toggleYN(q.id, true, yes, no),
+                );
+                no.addEventListener("click", () =>
+                    toggleYN(q.id, false, yes, no),
+                );
+                row.appendChild(yes);
+                row.appendChild(no);
+            } else if (q.type === "multi") {
+                q.options.forEach((opt) => {
+                    const p = pill(opt.label);
+                    p.dataset.key = opt.k;
+                    p.addEventListener("click", () =>
+                        toggleMulti(q.id, opt.k, p),
+                    );
+                    row.appendChild(p);
+                });
+            }
+            qHost.appendChild(row);
+        });
+    }
+
+    function pill(text) {
+        const b = document.createElement("button");
+        b.className = "pill";
+        b.type = "button";
+        b.setAttribute("aria-pressed", "false");
+        b.textContent = text;
+        return b;
+    }
+
+    function toggleYN(id, val, yEl, nEl) {
+        state[id] = val;
+        yEl.setAttribute("aria-pressed", val ? "true" : "false");
+        nEl.setAttribute("aria-pressed", !val ? "true" : "false");
+        updateOutput();
+    }
+
+    function toggleMulti(id, key, el) {
+        if (!state[id]) state[id] = new Set();
+        if (state[id] instanceof Set) {
+            if (state[id].has(key)) state[id].delete(key);
+            else state[id].add(key);
+            el.setAttribute(
+                "aria-pressed",
+                state[id].has(key) ? "true" : "false",
+            );
+        }
+        updateOutput();
+    }
+
+    function updateOutput() {
+        const items = [];
+        const chips = [];
+
+        QUESTIONS.forEach((q) => {
+            if (q.type === "yn" && state[q.id] === true) {
+                (q.yes || []).forEach((t) => items.push(t));
+                chips.push(q.text);
+            }
+            if (q.type === "yn" && state[q.id] === false) {
+                (q.no || []).forEach((t) => items.push(t));
+            }
+            if (q.type === "multi" && state[q.id] instanceof Set) {
+                const selected = [...state[q.id]];
+                q.options
+                    .filter((o) => selected.includes(o.k))
+                    .forEach((o) => {
+                        (o.add || []).forEach((t) => items.push(t));
+                        chips.push(`${q.text} · ${o.label}`);
+                    });
+            }
+        });
+
+        out.innerHTML = "";
+        if (items.length === 0) {
+            out.innerHTML =
+                "<li class='text-muted'>Answer questions above to build your personalized checklist.</li>";
+        } else {
+            const dedup = [...new Set(items)];
+            dedup.forEach((t) => {
+                const li = document.createElement("li");
+                li.innerHTML = t;
+                out.appendChild(li);
+            });
+        }
+
+        tags.innerHTML = chips
+            .map((c) => `<span class="tag">${c}</span>`)
+            .join("");
+    }
+
+    document
+        .getElementById("printBtn")
+        .addEventListener("click", () => window.print());
+    document.getElementById("resetBtn").addEventListener("click", () => {
+        for (const k in state) delete state[k];
+        render();
+        updateOutput();
+    });
+
+    // Initialize
+    render();
+    updateOutput();
+</script>
